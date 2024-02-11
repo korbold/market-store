@@ -1,0 +1,146 @@
+{
+  "project_info": {
+    "project_number": "21169786468",
+    "project_id": "sixth-tempo-349815",
+    "storage_bucket": "sixth-tempo-349815.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21169786468:android:fc4c339bb8676eae49d971",
+        "android_client_info": {
+          "package_name": "com.falcon.consumer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21169786468-7smkt3c8pb4v1bos8gm2chs3oohicm8g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.falcon.consumer",
+            "certificate_hash": "83901a5e0631c4b2d86b9c84ebb4b2f681a268a6"
+          }
+        },
+        {
+          "client_id": "21169786468-a1u37qbcpehqdptphahv8gopo2vg828g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.falcon.consumer",
+            "certificate_hash": "f7eb39ffaccde62af03a1e3fd11d50da7e180d1c"
+          }
+        },
+        {
+          "client_id": "21169786468-af9et9gvahkibsqcip0h9ophuld84qrr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.falcon.consumer",
+            "certificate_hash": "9f39497390fa5a988cde72cf46069fb747df7611"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGIuMDAPv6iXE1GUTK9bYD5TvGCR6IT4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21169786468-a1d4mr2vrisl6shvbr5nai9n3ubatbqr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "21169786468-e3em2f822d5qb46f7u2kvgsi57055sec.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.falcon.consumer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21169786468:android:1004c41124126f4a49d971",
+        "android_client_info": {
+          "package_name": "com.falcon.deliveryman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21169786468-b2imjg8oidd1luc5dbslef57il10hviv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.falcon.deliveryman",
+            "certificate_hash": "9f39497390fa5a988cde72cf46069fb747df7611"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGIuMDAPv6iXE1GUTK9bYD5TvGCR6IT4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21169786468-a1d4mr2vrisl6shvbr5nai9n3ubatbqr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "21169786468-e3em2f822d5qb46f7u2kvgsi57055sec.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.falcon.consumer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21169786468:android:2706e245dfe5fa1549d971",
+        "android_client_info": {
+          "package_name": "com.falcon.store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21169786468-uj73gdmjs8m3cs1cdav052d0t0prvreb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.falcon.store",
+            "certificate_hash": "9f39497390fa5a988cde72cf46069fb747df7611"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGIuMDAPv6iXE1GUTK9bYD5TvGCR6IT4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21169786468-a1d4mr2vrisl6shvbr5nai9n3ubatbqr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "21169786468-e3em2f822d5qb46f7u2kvgsi57055sec.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.falcon.consumer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
