@@ -19,20 +19,26 @@ class MenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double size = (context.width/4)-Dimensions.paddingSizeDefault;
+    double size = (context.width / 4) - Dimensions.paddingSizeDefault;
 
     return InkWell(
       onTap: () {
-        if(menu.isBlocked) {
+        if (menu.isBlocked) {
           showCustomSnackBar('this_feature_is_blocked_by_admin'.tr);
-        }else {
+        } else {
           if (isLogout) {
             Get.back();
             if (Get.find<AuthController>().isLoggedIn()) {
-              Get.dialog(ConfirmationDialog(icon: Images.support, description: 'are_you_sure_to_logout'.tr, isLogOut: true, onYesPressed: () {
-                Get.find<AuthController>().clearSharedData();
-                Get.offAllNamed(RouteHelper.getSignInRoute());
-              }), useSafeArea: false);
+              Get.dialog(
+                  ConfirmationDialog(
+                      icon: Images.support,
+                      description: 'are_you_sure_to_logout'.tr,
+                      isLogOut: true,
+                      onYesPressed: () {
+                        Get.find<AuthController>().clearSharedData();
+                        Get.offAllNamed(RouteHelper.getSignInRoute());
+                      }),
+                  useSafeArea: false);
             } else {
               Get.find<AuthController>().clearSharedData();
               Get.toNamed(RouteHelper.getSignInRoute());
@@ -43,23 +49,24 @@ class MenuButton extends StatelessWidget {
         }
       },
       child: Column(children: [
-
         Container(
-          height: size-(size*0.2),
+          height: size - (size * 0.2),
           padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
           margin: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
-            color: isLogout ? Get.find<AuthController>().isLoggedIn() ? Colors.red : Colors.green : Theme.of(context).primaryColor,
+            color: isLogout
+                ? Get.find<AuthController>().isLoggedIn()
+                    ? Colors.red
+                    : Colors.green
+                : Theme.of(context).primaryColor,
             boxShadow: [BoxShadow(color: Colors.grey[Get.isDarkMode ? 800 : 200]!, spreadRadius: 1, blurRadius: 5)],
           ),
           alignment: Alignment.center,
           child: isProfile ? ProfileImageWidget(size: size) : Image.asset(menu.icon, width: size, height: size, color: Colors.white),
         ),
         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-
         Text(menu.title, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall), textAlign: TextAlign.center),
-
       ]),
     );
   }
@@ -76,10 +83,13 @@ class ProfileImageWidget extends StatelessWidget {
         decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(width: 2, color: Colors.white)),
         child: ClipOval(
           child: CustomImage(
-            image: Get.find<AuthController>().getUserType() == 'owner' ? '${Get.find<SplashController>().configModel!.baseUrls!.vendorImageUrl}'
-                '/${(authController.profileModel != null && Get.find<AuthController>().isLoggedIn()) ? authController.profileModel!.image ?? '' : ''}'
-            : '${Get.find<SplashController>().configModel!.baseUrls!.storeImageUrl}/${authController.profileModel!.stores![0].logo}',
-            width: size, height: size, fit: BoxFit.cover,
+            image: Get.find<AuthController>().getUserType() == 'owner'
+                ? '${Get.find<SplashController>().configModel!.baseUrls!.vendorImageUrl}'
+                    '/${(authController.profileModel != null && Get.find<AuthController>().isLoggedIn()) ? authController.profileModel!.image ?? '' : ''}'
+                : '${authController.profileModel!.stores![0].logo}',
+            width: size,
+            height: size,
+            fit: BoxFit.cover,
           ),
         ),
       );

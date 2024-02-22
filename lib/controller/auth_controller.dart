@@ -206,6 +206,7 @@ class AuthController extends GetxController implements GetxService {
     Response response = await authRepo.getProfileInfo();
     if (response.statusCode == 200) {
       _profileModel = ProfileModel.fromJson(response.body);
+      debugPrint('----------profile-------->>${response.body}');
       Get.find<SplashController>().setModule(_profileModel!.stores![0].module!.id, _profileModel!.stores![0].module!.moduleType);
       authRepo.updateHeader(_profileModel!.stores![0].module!.id);
       allowModulePermission(_profileModel!.roles);

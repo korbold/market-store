@@ -91,7 +91,7 @@ class _StoreScreenState extends State<StoreScreen> with TickerProviderStateMixin
                 flexibleSpace: FlexibleSpaceBar(
                   background: CustomImage(
                     fit: BoxFit.cover, placeholder: Images.restaurantCover,
-                    image: '${Get.find<SplashController>().configModel!.baseUrls!.storeCoverPhotoUrl}/${store.coverPhoto}',
+                    image: store.coverPhoto??'',
                   ),
                 ),
               ),
@@ -107,7 +107,7 @@ class _StoreScreenState extends State<StoreScreen> with TickerProviderStateMixin
                         return ClipRRect(
                           borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                           child: CustomImage(
-                            image: '${Get.find<SplashController>().configModel!.baseUrls!.storeImageUrl}/${store.logo}',
+                            image: store.logo??'',
                             height: 40, width: 50, fit: BoxFit.cover,
                           ),
                         );

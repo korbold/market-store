@@ -6,7 +6,7 @@ class AppConstants {
   static const double appVersion = 2.5;
 
   //static const String baseUrl = 'https://6ammart-admin.6amtech.com';
- static const String baseUrl = 'http://192.168.1.102:8000';
+ static const String baseUrl = 'http://192.168.0.105:8000';
 
   static const String configUri = '/api/v1/config';
   static const String loginUri = '/api/v1/auth/vendor/login';
